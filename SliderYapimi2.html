@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Slider Yapimi2</title>
+   <style>
+    #kapsayici{
+        max-width: 640px;
+        position: relative;
+        margin: auto;
+    }
+    .resim{
+        width: 100%;
+        display: none;
+    }
+    img{
+        width: 100%;
+
+    }
+    ul{
+        list-style: none;
+        text-align: center;
+    }
+    ul li{
+        width: 45px;
+        height: 75px;
+        display: inline-block;
+        opacity: .6;
+        cursor: pointer;
+    }
+    .aktif{
+        display: block;
+        animation: fade .7s ease;
+    }
+    .aktifList{
+        opacity: 1;
+        animation: fade .7s ease;
+    }
+    @keyframes fade{
+        0%{opacity: .5;}
+        100%{opacity: 1;}
+    }
+   
+   </style>
+</head>
+<body>
+    <div id="kapsayici" onmouseover="dur()" onmouseout="devam()">
+        <div class="resim"><img src="images/resim1.jpg" alt=""></div>
+        <div class="resim"><img src="images/resim2.jpg" alt=""></div>
+        <div class="resim"><img src="images/resim3.jpg" alt=""></div>
+        <div class="resim"><img src="images/resim4.jpg" alt=""></div>
+    </div>
+
+    <ul>
+        <li><img src="images/kresim1.jpg" onclick="galeri(0)" alt=""></li>
+        <li><img src="images/kresim2.jpg" onclick="galeri(1)" alt=""></li>
+        <li><img src="images/kresim3.jpg" onclick="galeri(2)" alt=""></li>
+        <li><img src="images/kresim4.jpg" onclick="galeri(3)" alt=""></li>
+        
+    </ul>
+
+    <script>
+        var resim=document.getElementsByClassName("resim");
+        var kucukResim=document.getElementsByTagName("li");
+        var index=0;
+        galeri(index);
+        basla();
+        function galeri(indis){
+            index=indis;
+            if(index>=resim.length){
+                index=0;
+            }else if(index<0){
+                index=resim.length-1;
+            }
+            for(i=0;i<resim.length;i++){
+                resim[i].classList.remove("aktif");
+             kucukResim[i].classList.remove("aktifList");
+            }
+            resim[index].classList.add("aktif");
+             kucukResim[index].classList.add("aktifList");
+
+        }
+            function sonraki(){
+                index++;
+                galeri(index);
+            }
+            function basla(){
+               sure= setInterval(sonraki,2000)
+            }
+            function dur(){
+                clearInterval(sure)
+            }
+            function devam(){
+                sure= setInterval(sonraki,2000)
+            }
+    </script>
+</body>
+</html>

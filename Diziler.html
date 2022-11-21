@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Diziler </title>
+</head>
+<body>
+    <script>
+
+        var kirtasiye=["Kitap","Kalem","Silgi","Defter","Yapiskan","Bant"];
+        var kirtasiye2=["uhu","Karton","El isi Kagidi"];
+        console.log(kirtasiye);
+        console.log(kirtasiye2);
+        kirtasiye.push("Tahta Silgisi");  // push metodu dizinin sonuna eleman ekler
+        console.log(kirtasiye);
+      //  kirtasiye.pop();    //dizideki son elemani siler
+       // kirtasiye.splice(1,2); // kacinci elemandan itibaren kac elemani silecegini belirtir
+       // kirtasiye.splice(1,2,"Tahta kalemi","Tahta Silgisi"); // guncelleme yapar
+       yeniKirtasiye=kirtasiye.splice(3);
+       yeniDizi=yeniKirtasiye.concat(kirtasiye2); // dizileri birlestirdi.
+       console.log(yeniDizi);
+    </script>
+    
+</body>
+</html>

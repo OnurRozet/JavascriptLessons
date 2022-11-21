@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <ul id="dil">
+        <li>Javascript</li>
+        <li>Java</li>
+        <li>C#</li>
+    </ul>
+    <script>
+        // var baslik=document.createElement("h1");
+        // var yazi=document.createTextNode("Burasi Baslik");
+        // baslik.appendChild(yazi);
+        // document.body.appendChild(baslik);
+
+        var yenioge=document.createElement("li");
+        var yazi=document.createTextNode("Pyhton");
+        yenioge.appendChild(yazi);
+
+        var nereye=document.getElementById("dil");
+        nereye.insertBefore(yenioge,nereye.childNodes[0]);
+
+
+    </script>
+</body>
+
+</html>

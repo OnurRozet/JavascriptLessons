@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <input type="date" id="giris" value="2022-11-14">
+    <input type="date" id="cikis">
+    <button onclick="hesapla()">Hesapla</button>
+
+
+
+
+    <script>
+
+        var tarih = new Date();
+        yil = tarih.getFullYear();
+        ay = tarih.getMonth()+1;
+        gun = tarih.getDate();
+
+        if (gun < 10) {
+            gun = "0" + gun
+        }
+        if(ay<10){
+            ay="0"+ay;
+        }
+        bugununTarihi=yil+"-"+ay+"-"+gun;
+        document.getElementById("giris").value=bugununTarihi;
+
+
+        function hesapla() {
+            var giris = document.getElementById("giris").value;
+            var cikis = document.getElementById("cikis").value;
+            giris = new Date(giris);
+            cikis = new Date(cikis);
+            gunFarki = cikis - giris;
+            gunHesapla = gunFarki / (1000 * 60 * 60 * 24)
+            alert(gunHesapla);
+
+        }
+    </script>
+</body>
+
+</html>

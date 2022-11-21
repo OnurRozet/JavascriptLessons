@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        function degistir(){
+            document.getElementById("yazi").style.color="blue";
+            document.getElementById("yazi").innerHTML="Merhaba Dunya";
+            document.getElementById("metin").value="Bilisim Dunyasi";
+        }
+    </script>
+</head>
+<body>
+    <p id="yazi">Merhaba Js Dersleri</p>
+    <input type="text" id="metin">
+    <input type="button" value="Degistir" onclick="degistir()">
+</body>
+</html>

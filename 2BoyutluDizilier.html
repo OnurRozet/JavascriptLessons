@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>2 Boyutlu Diziler</title>
+</head>
+<body>
+    <script>
+        bilgi=[];
+       var ad=prompt("Ogrenci Adini Giriniz : ");
+       var notBilgisi=parseInt(prompt("Not bilgisini giriniz : "));
+        i=0;
+        while(ad!=null && Number.isInteger(notBilgisi)){
+            bilgi[i]=[ad,notBilgisi];
+            ad=prompt("Ogrenci Adini Giriniz : ");
+            notBilgisi=parseInt(prompt("Not bilgisini giriniz : "));
+            i++;
+        }
+        console.log(bilgi);
+
+
+    </script>
+</body>
+</html>

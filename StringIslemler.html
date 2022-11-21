@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>String Islemler</title>
+</head>
+<body>
+   <!-- Mail adresinin dogrulugunun kontrol edilmesi -->
+
+  <script>
+    var mail=prompt("Mail Adresi Giriniz : ");
+    //noktaKonum=mail.indexOf(".");
+    atKonumu=mail.indexOf("@");
+    comKonum=mail.indexOf(".com")
+    if(atKonumu<comKonum +2  && atKonumu>2 && comKonum>atKonumu+2 ){
+        alert("gecerli e posta girdiniz")
+    }else{
+        alert("gecersiz e posta girdiniz")
+    }
+
+  </script>
+
+
+
+</body>
+</html>

@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://ajax.aspnetcdn.com/ajax/jQuery/jquery-3.6.0.min.js"></script>
+
+</head>
+<body>
+    <div class="container">
+        <h1 id="baslik">Jqery Dersleri</h1>
+        <h2>2.Alt Baslik</h2>
+        <h3>3.Alt Baslik</h3>
+        <h4>4.Alt Baslik</h4>
+        <p>1. Jqery Nedir? </p>
+        <p>2.Jqery Syntax Yapisi</p>
+        <p>3.jqery Secicileri</p>
+        <span>
+            <p>a) Element Secici</p>
+            <p>b) Sinif Secici</p>
+            <p>c)Id Secici</p>
+        </span>
+        <p>4.Jqery Fonksiyonlari</p>
+        <p>5.Jqery Ornek Uygulamalari</p>
+
+    
+    </div>
+    <form action=" ">
+
+        <input type="text" name="ad" id="isim"><br>
+        <input type="text" name="soyad" id="soyisim"><br>
+        <input type="radio" name="" id=""><br>
+        <input type="radio" name="" id="" checked><br>
+        <input type="button" value="Basiniz"><br>
+
+    </form>
+
+    <script>
+        $(document).ready(function(){
+           // $("div").css("color","blue");  1. Element secici
+          // $(".container").css("color","red");  1.sinif Secici
+          //$("#baslik").css("color","red");
+          //$("#baslik, span").css("color","red");
+          //$(".container>p").css("color","red"); // parent-child secici
+          //$("h1 + p").css("color","red");  // komsuluk secici
+           //$("h1~p").css("color","red");   // komsu ebeveyn seciciler
+           //$("p:first").css("color","red"); // belirlenen ilk kriter secici
+           //$("p:last").css("color","red");   // belirlenen son kriter
+          // $("span p:last").css("color","red");
+           //$("span p:first").css("color","red");
+           //$("p:eq(4)").css("color","red");  // belirlenen indexe gore secici
+           //$("p:gt(2)").css("color","red");   // belirlenen indexten sonrakileri secme
+           //$(".container p:lt(3)").css("color","red");
+           //$(":header").css("color","red");  // heaader-baslik secici
+            //$("p:contains('a)')").css("color","red");  //filtreleme secici
+            //$("div:visible").hide(1000);  // gorunur ve gizli olanlar secicisi
+            //$("[type=text]").hide(1000);  //attribute secici
+            //$("[name=ad]").hide(1000);  //atribute secici
+             //$("input[name=ad]").hide(1000);  // atribute secici
+             //$("input[name$=yad").hide(1000);  // atribute secici
+            // $("input[value*=z]").hide(1000);  //attribute secici
+            //$(":radio").hide(1000);  // form elemani secici
+            //$(":disable").css("transform","scale(2)");
+
+
+
+
+
+        })
+
+    </script>
+    
+</body>
+</html>

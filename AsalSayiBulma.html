@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Asal Sayi Bulma </title>
+</head>
+
+<body>
+    <script>
+
+        var sayi = parseInt(prompt("Sayi giriniz "));
+        asal = true;
+        for (i = 2; i <= sayi / 2; i++) {
+            if (sayi % i == 0) {
+                alert("Girmis oldugunuz sayi asal degildir")
+                asal = false;
+                break;
+            }
+        }
+        if (asal) {
+            alert("Girmis oldugunuz sayi asaldir.")
+        }
+
+
+    </script>
+</body>
+
+</html>

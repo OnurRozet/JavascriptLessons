@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+
+    <ul id="liste1">
+        <li>Python</li>
+        <li>C#</li>
+    </ul>
+
+    <ul id="liste2">
+        <li>Java</li>
+        <li>Javascript</li>
+    </ul>
+    <button onclick="tasi()">Tasi</button>
+    <button onclick="sil()">Sil</button>
+    <button onclick="kopyala()">Kopyala</button>
+    <script>
+        function tasi() {
+            var tasinacakOge = document.getElementById("liste2").lastChild;
+            var nereyeTasinaccak = document.getElementById("liste1");
+            nereyeTasinaccak.insertBefore(tasinacakOge, nereyeTasinaccak.childNodes[0]);
+        }
+
+        function sil(){
+
+            var silinecekOge=document.getElementById("liste1");
+            silinecekOge.removeChild(silinecekOge.lastChild);
+        }
+
+        function kopyala(){
+            var kopyalanacak=document.getElementById("liste2").childNodes[1];
+            kopya=kopyalanacak.cloneNode(true);
+            nereye=document.getElementById("liste1");
+            nereye.insertBefore(kopya,nereye.childNodes[0]);
+
+        }
+
+    </script>
+
+
+</body>
+
+</html>

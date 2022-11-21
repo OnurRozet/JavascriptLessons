@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <form action="">
+        <input type="button" value="Tiklayiniz" onclick="cikarma()">
+        <textarea name="sonuc" id="" cols="30" rows="10"></textarea>
+
+        
+
+       
+    </form>
+
+    <button id="adres" onclick="">Sayfaya Git</button>
+    <script>
+
+        function cikarma(){
+            var sayi1=100;
+            var sayi2=45;
+            var sonuc=sayi1-sayi2;
+            document.getElementsByTagName("textarea")[0].innerHTML=sonuc;
+        }
+        document.querySelector("#adres").onclick=function(){
+            window.location.href="https://google.com";
+        }
+    </script>
+</body>
+</html>

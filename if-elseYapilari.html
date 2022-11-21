@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>If-Else Yapilari</title>
+</head>
+
+<body>
+
+    Adiniz <input type="text" id="ad"><br><br>
+    Soyadiniz <input type="text" id="soyad"><br><br>
+    Sifreniz <input type="text" id="sifre"><br><br>
+    <input type="button" value="Kontrol Et" onclick="kontrol()">
+
+    <hr>
+
+    Vize: <input type="text" id="vize"><br><br>
+    Final: <input type="text" id="final"><br><br>
+    Sonuc: <input type="button" value="sonuc" onclick="Sonuc()">
+
+    <hr>
+
+    100'luk Sistemdeki Notunuz <br>
+    <input type="text" id="not"><br>
+    <input type="button" value="Sonuc" onclick="notUret()">
+
+</body>
+<script>
+    function notUret() {
+        var not = document.getElementById("not").value;
+        not = parseInt(not);
+        if (not < 45) {
+            alert("100'luk sistemdeki not karsiligi : 1 dir ")
+        } else if (not >= 45 && not < 55) {
+
+            alert("100'luk sistemdeki not karsiligi : 2 dir ")
+        } else if (not >= 55 && not < 70) {
+
+            alert("100'luk sistemdeki not karsiligi : 3 dir ")
+        } else if (not >= 70 && not < 85) {
+
+            alert("100'luk sistemdeki not karsiligi : 4 dir ")
+        } else if (not >=85 && not<=100) {
+
+            alert("100'luk sistemdeki not karsiligi : 5 dir ")
+        }else{
+            alert("Hatali Not Girdiniz")
+        }
+    }
+
+
+    // function Sonuc() {
+    //     var vize = document.getElementById("vize").value;
+    //     var final = document.getElementById("final").value;
+    //     vize = parseInt(vize);
+    //     final = parseInt(final);
+    //     var ortalama = vize * 0.4 + final * 0.6;
+    //     if (ortalama>50 && final>=60) {
+    //         alert("Ortalamaniz " + ortalama + " gectiniz")
+    //     } else {
+    //         alert("Ortalamaniz " + ortalama + " kaldiniz")
+    //     }
+    // }
+
+
+    // function kontrol() {
+
+    //     var ad = document.getElementById("ad").value;
+    //     var soyad = document.getElementById("soyad").value;
+    //     var sifre = document.getElementById("sifre").value;
+
+    //     if (ad == "") {
+    //         alert("Ad alani zorunludur.")
+    //     }
+    //     else if (soyad == "") {
+    //         alert("Soyad alani zorunludur.")
+    //     } else if (sifre == "") {
+    //         alert("Sifre bolumu zorunludur.")
+    //     }
+
+
+
+
+
+
+    //}
+
+</script>
+
+</html>

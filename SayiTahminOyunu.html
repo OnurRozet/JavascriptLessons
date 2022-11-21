@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sayi Tahmin Oyunu</title>
+</head>
+
+<body>
+
+    <script>
+        var rastgele = parseInt(Math.random() * 100);
+        //alert(rastgele);
+        bildi=0;
+        for (sayac = 1; sayac <= 5; sayac++) {
+            var sayi = parseInt(prompt("Bir Sayi Giriniz."))
+            if (sayi > rastgele) {
+                alert("Sayinizi azaltin");
+            } else if (rastgele > sayi) {
+                alert("Sayinizi yukseltin");
+            } else {
+                alert("Tebrikler Bildiniz");
+                bildi=1;
+                break;
+            }
+        }
+        if(bildi==0){
+            alert("Uzgunum Bilemediniz. Tuttugum Sayi " + rastgele)
+        }
+
+
+
+
+    </script>
+
+</body>
+
+</html>

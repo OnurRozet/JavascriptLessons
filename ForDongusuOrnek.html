@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ornek</title>
+</head>
+
+<body>
+    <input type="checkbox" name="hobi">Kitap <br>
+    <input type="checkbox" name="hobi">Resim <br>
+    <input type="checkbox" name="hobi">Spor <br>
+    <input type="checkbox" name="hobi">Gezi <br>
+    <input type="button" value="Tumunu Sec" onclick="tumunuSec()">
+
+</body>
+<script>
+    var toplamSayi = document.getElementsByName("hobi").length;
+    function tumunuSec() {
+        for (i = 0; i < toplamSayi; i++){
+            document.getElementsByName("hobi")[i].checked=true;
+        }
+    }
+</script>
+
+</html>
